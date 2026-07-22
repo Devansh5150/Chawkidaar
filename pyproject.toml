@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chawkidaar"
+version = "0.1.0"
+description = "Chawkidaar - Production-Grade Autonomous AI Monitoring & Agent System"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+    "typer>=0.12.0",
+    "rich>=13.0.0",
+    "fastapi>=0.110.0",
+    "uvicorn>=0.28.0",
+    "sqlmodel>=0.0.16",
+    "pydantic>=2.6.0",
+    "pyyaml>=6.0.1",
+    "python-telegram-bot>=21.0",
+    "gitpython>=3.1.42",
+    "python-dotenv>=1.0.1"
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff",
+    "pytest"
+]
+
+[project.scripts]
+chawkidaar = "chawkidaar.main:app"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["chawkidaar*"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]

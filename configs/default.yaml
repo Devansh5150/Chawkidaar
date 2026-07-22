@@ -1,0 +1,13 @@
+# Default configuration for Chawkidaar
+app:
+  name: "Chawkidaar"
+  environment: "development"
+  debug: true
+
+logging:
+  level: "INFO"
+
+telegram:
+  enabled: false
+  token: ""
+  chat_id: ""
