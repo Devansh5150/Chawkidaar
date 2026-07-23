@@ -1,0 +1,44 @@
+name: Epic
+description: Large initiative consisting of multiple features and tasks.
+title: "[EPIC] "
+labels:
+  - epic
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Epic Overview
+        Describe the overall initiative.
+
+  - type: textarea
+    id: vision
+    attributes:
+      label: Vision
+      description: What problem does this epic solve?
+      placeholder: Describe the overall vision...
+    validations:
+      required: true
+
+  - type: textarea
+    id: objectives
+    attributes:
+      label: Objectives
+      description: List the objectives.
+      placeholder: |
+        - Objective 1
+        - Objective 2
+    validations:
+      required: true
+
+  - type: textarea
+    id: milestones
+    attributes:
+      label: Milestones
+      description: List major milestones.
+
+  - type: textarea
+    id: success
+    attributes:
+      label: Success Criteria
+      description: When should this epic be considered complete?

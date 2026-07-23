@@ -1,0 +1,29 @@
+name: Task
+description: Small engineering task.
+title: "[TASK] "
+labels:
+  - task
+
+body:
+  - type: textarea
+    id: task
+    attributes:
+      label: Task Description
+      placeholder: Describe the task...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Outcome
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: Implemented
+        - label: Tested
+        - label: Documentation updated
+        - label: Ready for review

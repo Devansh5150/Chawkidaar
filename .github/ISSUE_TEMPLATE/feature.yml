@@ -1,0 +1,44 @@
+name: Feature
+description: Request a new feature.
+title: "[FEATURE] "
+labels:
+  - enhancement
+
+body:
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objective
+      placeholder: What should be built?
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      placeholder: What is included?
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      placeholder: |
+        - [ ] Requirement 1
+        - [ ] Requirement 2
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies
+      placeholder: Related issues or blockers
+
+  - type: checkboxes
+    id: done
+    attributes:
+      label: Definition of Done
+      options:
+        - label: Feature implemented
+        - label: Tests pass
+        - label: Documentation updated
+        - label: Ready for review
