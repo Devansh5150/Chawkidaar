@@ -1,13 +1,35 @@
-# Default configuration for Chawkidaar
-app:
+# Default Project Configuration for Chawkidaar
+project:
   name: "Chawkidaar"
+  version: "0.1.0"
+  description: "Production-Grade Autonomous AI Monitoring & Agent System"
   environment: "development"
-  debug: true
 
-logging:
-  level: "INFO"
+agent:
+  agent_type: "antigravity"
+  model: "gemini-3.6-flash"
+  max_loops: 10
+  timeout_seconds: 600
+
+loop:
+  auto_verify: true
+  max_retries: 3
+  state_file_path: ".chawkidaar/state.json"
+  checkpoint_dir: ".chawkidaar/checkpoints"
+
+verification:
+  test_command: "pytest"
+  lint_command: "ruff check ."
+  type_check_command: "mypy ."
 
 telegram:
   enabled: false
-  token: ""
+  bot_token: ""
   chat_id: ""
+  notification_events:
+    - "LoopStarted"
+    - "VerificationPassed"
+    - "VerificationFailed"
+    - "WaitingForApproval"
+    - "LoopApproved"
+    - "LoopFailed"

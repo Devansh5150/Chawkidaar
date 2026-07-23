@@ -4,10 +4,10 @@ Provides JSON or structured console logging for state transitions, execution tim
 errors, and recovery events.
 """
 
-from datetime import datetime, timezone
 import json
 import logging
 import sys
+from datetime import datetime, timezone
 from typing import Any, Dict
 
 from chawkidaar.loops.events import EventBus, LoopEvent

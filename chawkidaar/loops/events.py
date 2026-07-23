@@ -3,10 +3,10 @@
 Allows decoupled event emission and subscription across modules.
 """
 
-from dataclasses import dataclass, field
-from datetime import datetime, timezone
 import logging
 import uuid
+from dataclasses import dataclass, field
+from datetime import datetime, timezone
 
 
 def _utc_now_iso() -> str:
